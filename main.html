@@ -222,12 +222,25 @@
     <!-- Parallax layers -->
     <div class="parallax-layer" id="stars1"></div>
     <div class="parallax-layer" id="stars2"></div>
+<audio id="bg-music" loop>
+    <source src="birth.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    document.addEventListener("click", function() {
+        let audio = document.getElementById("bg-music");
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+</script>
 
     <!-- Main container -->
     <div class="magic-container" id="messageContainer">
         <div class="holographic-effect"></div>
         <p class="message neon-text" id="initialMessage">
-            <span>🌟</span> There’s a surprise waiting for you! 😊🎁 <span>✨</span>
+            <span>🌟</span> There’s something waiting for you! 😊🎁 <span>✨</span>
         </p>
         <p class="message hidden" id="secondMessage">
             <span>🎉</span> Happy Birthday,Suhana 🎉🥳 <span>💖</span>
@@ -235,7 +248,7 @@
     </div>
 
     <button class="cyber-button" id="enterButton">
-        🚀 Click here to see your surprise! 🎁🎇
+        🚀 Click here to proceed to next part 🎁🎇
     </button>
 
     <script>
